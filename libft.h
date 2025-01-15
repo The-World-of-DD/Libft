@@ -1,6 +1,20 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/15 16:40:37 by dierojas          #+#    #+#             */
+/*   Updated: 2025/01/15 20:07:11 by dierojas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
+#ifndef LIBFT_H
+#define LIBFT_H
+
+#include <unistd.h>
+#include <stdlib.h>
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
@@ -40,15 +54,4 @@ void ft_putendl_fd(char *s, int fd);//no se si el salto de linea tiene que estar
 void ft_putnbr_fd(int n, int fd);
 
 
-
-char src [] = "Hola Mundo";
-size_t len = 4;
-unsigned char c = 'A';
-
-int	main ()
-{
-	//printf("%d\n",(ft_isalpha(c)));
-	//printf("%d\n",(ft_isalnum(c)));
-
-	
-}
+#endif
