@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 18:58:01 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/16 08:25:54 by dierojas         ###   ########.fr       */
+/*   Created: 2025/01/16 08:23:13 by dierojas          #+#    #+#             */
+/*   Updated: 2025/01/16 08:42:17 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ch;
-	unsigned int	i;
+	size_t	i;
+	unsigned char	*ch ;
 
-	ch = (unsigned char *)b;
+	if (n == 0)
+		return ;
 	i = 0;
-	while (i < len)
+	ch = (unsigned char *)s;
+	while (i < n)
 	{
-		ch[i] = (unsigned char)c;
+		ch[i] = 0;
 		i++;
 	}
-	return (b);
 }
 /*
 #include <stdio.h>
@@ -32,10 +33,10 @@ void	*ft_memset(void *b, int c, size_t len)
 int	main ()
 {
 	char src [] = "Hola Mundo";
-	size_t len = 4;
-	unsigned char c = 'A';
-
-	printf("%p\n", ft_memset(src, c, len));
+	size_t n = 5;
+	
+	printf("%s\n", src);
+	ft_bzero(src, n);
 	printf("%s\n", src);
 }
 */

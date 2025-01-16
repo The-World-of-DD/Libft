@@ -39,8 +39,6 @@ void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);//no se si el salto de linea tiene que estar alli
 void ft_putnbr_fd(int n, int fd);
 
-
-
 char src [] = "Hola Mundo";
 size_t len = 4;
 unsigned char c = 'A';

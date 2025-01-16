@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:40:37 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/15 20:07:11 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/16 08:45:01 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ int	ft_isascii(int c);
 int	ft_isprint(int c);
 size_t	ft_strlen(const char *str);
 void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
+void    *ft_memcpy(void *dst, const void *src, size_t n);
 
 
-void	ft_bzero(void *s, size_t n);//y tu también...
-void    *ft_memcpy(void *dest, const void *src, size_t n); // hacerr test, pero esta ok
 void    *ft_memmove(void *dest, const void *src, size_t n); // Hacemos pruebas y repetimoos-
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
