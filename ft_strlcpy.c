@@ -1,49 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 20:30:53 by dd                #+#    #+#             */
-/*   Updated: 2025/01/17 08:17:54 by dierojas         ###   ########.fr       */
+/*   Created: 2025/01/17 08:36:51 by dierojas          #+#    #+#             */
+/*   Updated: 2025/01/17 09:44:07 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memmove(void *dst, const void *src, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-    char	*destn;
-	const char	*sourc;
-
-	destn = (char *)dst;
-	sourc = (const char *)src;
-    if (destn > sourc)
-        //??????????
-    i = 0;
-	while (destn[i] && (i < n))
+	
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	i = 0;
+	while (src[i] && (i < dstsize - 1))
 	{
-		destn[i] = sourc[i];
+		dst[i] = src[i];
 		i++;
 	}
-	return (dst);
+	dst[i] = '\0';
+	while (src[i])
+		i++;
+	return (i);
 }
-
+/*
 #include <stdio.h>
 
-int main ()
+int	main()
 {
-	char src [] = "Hola Mundo";
-	char dest [10] = "ADIOS";
+	char src [] = "ADIOS";
+	char dest [10] = "Hola Mundo";
 	size_t len = 4;
 
 	printf("%s\n", src);
 	printf("%s\n", dest);
 
-	ft_memmove(dest, src, len);
+	printf ("%zu\n", ft_strlcpy(dest, src, len));
 
 	printf("%s\n", src);
 	printf("%s\n", dest);
 }
+*/
