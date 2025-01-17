@@ -1,51 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dd <dd@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 08:43:09 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/16 20:30:23 by dd               ###   ########.fr       */
+/*   Created: 2025/01/16 20:30:53 by dd                #+#    #+#             */
+/*   Updated: 2025/01/17 08:06:10 by dd               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memcpy(void *dst, const void *src, size_t n)
+void    *ft_memmove(void *dst, const void *src, size_t n)
 {
 	size_t	i;
-	unsigned char	*destn;
-	unsigned const char	*sourc;
+    char	*destn;
+	const char	*sourc;
 
-	destn = (unsigned char *)dst;
-	sourc = (unsigned const char *)src;
-	i = 0;
-	while (i < n)
+	destn = (char *)dst;
+	sourc = (const char *)src;
+    if (destn > sourc)
+        //??????????
+    i = 0;
+	while (destn[i] && (i < n))
 	{
 		destn[i] = sourc[i];
 		i++;
 	}
 	return (dst);
 }
-/*	
+
 #include <stdio.h>
 
-int	main ()
+int main ()
 {
 	char src [] = "Hola Mundo";
-	char dest [10] = "ADIOS";	
+	char dest [10] = "ADIOS";
 	size_t len = 4;
-	unsigned char c = 'A';
 
 	printf("%s\n", src);
 	printf("%s\n", dest);
 
-	ft_memcpy(dest, src, len);
-	dest[len] = '\0';
+	ft_memmove(dest, src, len);
 
 	printf("%s\n", src);
 	printf("%s\n", dest);
-	return 0;
 }
-*/
