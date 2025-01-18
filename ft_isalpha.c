@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 17:07:47 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/15 17:07:58 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/18 19:18:49 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

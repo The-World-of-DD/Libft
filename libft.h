@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:40:37 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/17 15:11:43 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/18 20:26:36 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int	ft_toupper(int c);
 int	ft_tolower(int c);
-char	*ft_strchr(const char *s, int c); // listo, pero tengo que hacer mis pruebas
-
-char	*ft_strrchr(const char *s, int c); // listo, pero tengo que hacer mis pruebas
-int	ft_strncmp(char *s1, char *s2, unsigned int n);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+int	ft_strncmp(char *s1, char *s2, unsigned int n);//NO entiendo porque el main esta mal
 void	*ft_memchr(const void *s, int c, size_t n);
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);//menuda humillacion, que vergüenza
 int	ft_atoi(const char *str);
