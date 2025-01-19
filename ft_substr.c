@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/19 20:28:16 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/19 23:41:00 by dierojas         ###   ########.fr       */
+/*   Created: 2025/01/20 00:39:44 by dierojas          #+#    #+#             */
+/*   Updated: 2025/01/20 00:55:49 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    void    *mem;
+    size_t  i;
+    size_t  j;
+    char    *sbstr;
 
-    mem = malloc(count * size);
-    if (!mem)
+    sbstr = malloc (len);
+    if (!sbstr)
         return (NULL);
-    ft_bzero(mem, count * size);
-    return (mem);
+    i = 0;
+    while (s[i] && i < len)
+    {
+        j = 0;
+        while((unsigned int *)s[i] == start)
+        {
+            if 
+            j++;
+        }
+        i++;
+    }
 }
-/*
-#include <stdio.h>
-
-int main ()
-{
-    void *cosa = ft_calloc(3,2);
-    if (cosa == NULL)
-        printf ("Hola");
-    else
-        printf("adios");
-    free (cosa);
-    return 0;
-}
-*/
