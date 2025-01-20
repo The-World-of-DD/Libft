@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 20:58:10 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/20 21:29:18 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/20 21:43:59 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s3 = malloc (ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!s3)
 		return (NULL);
