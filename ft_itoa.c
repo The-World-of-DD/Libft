@@ -1,50 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/20 20:58:10 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/21 11:17:33 by dierojas         ###   ########.fr       */
+/*   Created: 2025/01/21 10:30:30 by dierojas          #+#    #+#             */
+/*   Updated: 2025/01/21 15:29:56 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+size_t	ft_count_num(int c)
 {
-	char	*s3;
+	size_t	count;
+
+	count = 0;
+	if (c < 0)
+		count = 1;
+	while (c >= 10)
+	{
+		c = c/10;
+		count ++;
+	}
+	if (c < 10)
+		count++;
+	return (count);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*ito;
 	size_t	i;
-	size_t	j;
-
-	if (!s1 || !s2)
+	int	sign;
+	
+	ito = malloc(ft_count_num(n)) + 1;
+	if (!ito)
 		return (NULL);
-	s3 = malloc (ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!s3)
-		return (NULL);
-	i = 0;
-	while (s1[i])
+	if (n < 0)
+		sign == -1;
+		n = n * -1;
+	if (n >= 10)
 	{
-		s3[i] = s1[i];
-		i++;
+		ito = n/10 + '0';
+		ft_itoa(n);
 	}
-	j = 0;
-	while (s2[j])
+	if (n < 10)
 	{
-		s3[i] = s2[j];
-		i++;
-		j++;
+		ito = n + '0';
+		ft_itoa(n);
 	}
-	s3[i] = '\0';
-	return (s3);
-}
-/*
-#include <stdio.h>
 
-int	main ()
-{
-	printf("%s\n", ft_strjoin("Hola", "Mundo"));
-	return 0;
+	if (sign > 0)
+		ito[0] = '-';
+	return (ito);
 }
-*/
