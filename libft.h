@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:40:37 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/21 11:18:10 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/22 09:52:50 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_itoa(int n);
 //char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-//void ft_putchar_fd(char c, int fd);
-//void ft_putstr_fd(char *s, int fd);
-//void ft_putendl_fd(char *s, int fd);//no se si el salto de linea tiene que estar alli
-//void ft_putnbr_fd(int n, int fd);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *s, int fd);
+void    ft_putendl_fd(char *s, int fd);//no se si el salto de linea tiene que estar alli
+void    ft_putnbr_fd(int n, int fd);
 
 #endif
