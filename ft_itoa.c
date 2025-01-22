@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:30:30 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/21 22:16:58 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/22 11:32:14 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,18 @@ size_t	ft_count_num(int c)
 	size_t	count;
 
 	count = 0;
+	if (c == -2147483648)
+		return (12);
 	if (c < 0)
-		count = 1;
-	while (c >= 10)
 	{
-		c = c/10;
-		count ++;
+		c *= -1;
+		count = 1;
 	}
-	if (c < 10)
+	while (c > 0)
+	{
+		c /= 10;
 		count++;
+	}
 	return (count);
 }
 
@@ -38,23 +41,22 @@ char	*ft_itoa(int n)
 	ito = malloc(ft_count_num(n) + 1);
 	if (!ito)
 		return (NULL);
+	i = 0;
 	if (n < 0)
 	{
-		sign[i] = '-';
+		ito[0]= '-';
 		n *= -1;
+		i = 1;
 	}
-	if (n >= 10)
+	while (n >= 10)
 	{
-		ito = n/10 + '0';
-		ft_itoa(n/10);
+		n /= 10;
+		ito[i] = (n % 10) + '0';
+		i++;
 	}
 	if (n < 10)
-	{
-		ito = n + '0';
-		ft_itoa(n);
-	}
-	if (sign > 0)
-		ito[0] = '-';
+		ito[i] = (n % 10) + '0';
+	ito[i] = '\0';
 	return (ito);
 }
 
@@ -62,8 +64,8 @@ char	*ft_itoa(int n)
 
 int	main ()
 {
-	int a = 23333333;
-	int b = -23333333;
+	int a = 21111112;
+	int b = -21111112;
 	printf("%s\n", ft_itoa(a));
 	printf("%s\n", ft_itoa(b));
 
