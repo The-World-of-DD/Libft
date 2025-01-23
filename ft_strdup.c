@@ -6,25 +6,13 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 23:41:22 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/20 21:04:12 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/23 08:30:51 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strcpy(char *dst, const char *src)
-{
-    size_t  i;
-
-    i = 0;
-    while (src[i])
-    {
-        dst[i] = src[i];
-        i++;
-    }
-    dst[i] = '\0';
-    return (dst);
-}
+static  *ft_strcpy(char *dst, const char *src);
 
 char	*ft_strdup(const char *s1)
 {
@@ -37,6 +25,20 @@ char	*ft_strdup(const char *s1)
         return (NULL);
     ft_strcpy(str, s1);
     return (str);
+}
+
+static    *ft_strcpy(char *dst, const char *src)
+{
+    size_t  i;
+
+    i = 0;
+    while (src[i])
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    dst[i] = '\0';
+    return (dst);
 }
 /*
 #include <stdio.h>

@@ -6,67 +6,88 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:30:30 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/22 11:32:14 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/23 10:27:53 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_num(int c)
+static int	ft_count_mem(long nb);
+static char	*ft_mem_al(int ito_len);
+
+char	*ft_itoa(int n)
 {
-	size_t	count;
+	int		len;
+	int		i;
+	char	*ito;
+	long	nb;
+
+	nb = n;
+	len = ft_count_mem(nb);
+	ito = ft_mem_al(len);
+	if (!ito)
+		return (NULL);
+	ito[len] = '\0';
+	if (nb < 0)
+		nb = -nb;
+	i = len - 1;
+	while (nb > 0)
+	{
+		ito[i] = (nb % 10) + '0';
+		nb /= 10;
+		i--;
+	}
+	if (n < 0)
+		ito[0] = '-';
+	if (n == 0)
+		ito[0] = '0';
+	return (ito);
+}
+
+static char	*ft_mem_al(int ito_len)
+{
+	char	*len;
+	
+	len = malloc((ito_len + 1) * sizeof(char));
+	if (!len)
+		return (NULL);
+	return (len);
+}
+
+static	int	ft_count_mem(long nb)
+{
+	int	count;
 
 	count = 0;
-	if (c == -2147483648)
+	if (nb == -2147483648)
 		return (12);
-	if (c < 0)
+	if (nb < 0)
 	{
-		c *= -1;
-		count = 1;
+		nb = -nb;
+		count++;
 	}
-	while (c > 0)
+	if (nb == 0)
+		count++;
+	while (nb != 0)
 	{
-		c /= 10;
+		nb /= 10;
 		count++;
 	}
 	return (count);
 }
-
-char	*ft_itoa(int n)
-{
-	char	*ito;
-	size_t	i;
-	char	sign;
-	
-	ito = malloc(ft_count_num(n) + 1);
-	if (!ito)
-		return (NULL);
-	i = 0;
-	if (n < 0)
-	{
-		ito[0]= '-';
-		n *= -1;
-		i = 1;
-	}
-	while (n >= 10)
-	{
-		n /= 10;
-		ito[i] = (n % 10) + '0';
-		i++;
-	}
-	if (n < 10)
-		ito[i] = (n % 10) + '0';
-	ito[i] = '\0';
-	return (ito);
-}
-
+/*
 #include "stdio.h"
 
 int	main ()
 {
 	int a = 21111112;
 	int b = -21111112;
+	int c = 0;
+	
 	printf("%s\n", ft_itoa(a));
 	printf("%s\n", ft_itoa(b));
-
+	printf("%s\n", ft_itoa(c));
+	
+	return 0;
 }
+*/
