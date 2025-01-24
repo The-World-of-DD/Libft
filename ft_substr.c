@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 00:39:44 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/20 20:55:44 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/24 01:24:26 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
     i = 0;
     while (s[i] && i < len)
     {
-        while (i < len)
+        if (i < len)
         {
             sbstr[i] = s[start];
             start++;
             i++;
         }
-        i++;
     }
     return (sbstr);
 }
