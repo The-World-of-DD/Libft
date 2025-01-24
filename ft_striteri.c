@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/17 14:54:41 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/24 16:28:15 by dierojas         ###   ########.fr       */
+/*   Created: 2025/01/24 16:44:02 by dierojas          #+#    #+#             */
+/*   Updated: 2025/01/24 17:51:18 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	unsigned int	i;
+	char	*str;
+
+	i = 0;
 }

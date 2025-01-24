@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:40:37 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/24 01:22:26 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/24 17:25:47 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 //char	*ft_strtrim(char const *s1, char const *set);//tenemos que modificarla por el numero de lineas  D:
 //char	**ft_split(char const *s, char c);
-
-char	*ft_itoa(int n);
-//char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+//char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void    ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
-void    ft_putendl_fd(char *s, int fd);//no se si el salto de linea tiene que estar alli
+void    ft_putendl_fd(char *s, int fd);
 void    ft_putnbr_fd(int n, int fd);
 
 #endif
