@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:40:37 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/24 17:25:47 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/24 23:01:16 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 //char	**ft_split(char const *s, char c);
 //char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-//void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void    ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
 void    ft_putendl_fd(char *s, int fd);

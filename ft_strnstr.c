@@ -6,7 +6,7 @@
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 01:45:12 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/24 01:22:19 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/24 23:00:05 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
     }
     return (NULL);
 }
-
 // #include <stdio.h>
 // #include <string.h>
-
 // int main ()
 // {
 //     printf("%s\n", strnstr("Alp Bett Omeg", "Omeg", 16));
@@ -46,4 +44,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 //     return 0;
 // }
-

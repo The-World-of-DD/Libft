@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 15:10:25 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/17 15:11:00 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/24 23:00:59 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@ int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (c + 32);
+	return (c);
 }
