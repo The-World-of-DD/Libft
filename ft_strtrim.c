@@ -6,7 +6,7 @@
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 21:29:38 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/25 11:34:18 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/25 11:36:31 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		
 	}
-	
-
 	s2 = malloc(ft_strlen(set) + 1);
 	if(!s2 || !s1)
 		return (NULL);

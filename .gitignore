@@ -1,4 +1,6 @@
 *.gch
 *.out
 
+mains.c
+
 /.vscode
