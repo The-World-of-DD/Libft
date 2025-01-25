@@ -6,7 +6,7 @@
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 01:45:12 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/24 23:00:05 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/25 11:39:02 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 //     printf("%s\n", strnstr("Alp Bett Omeg", "Alp", 7));
 //     printf("%s\n", ft_strnstr("Alp Bett Omeg", "Omeg", 20));
 //     printf("%s\n", ft_strnstr("Alp Bett Omeg", "Bett", 7));
-
 //     return 0;
 // }
