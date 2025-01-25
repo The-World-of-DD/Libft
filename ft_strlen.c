@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 18:54:55 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/15 18:56:42 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/25 16:21:43 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (str[i])
 		i++;

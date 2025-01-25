@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 08:23:13 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/16 08:42:17 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/25 16:03:22 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-	unsigned char	*ch ;
+	unsigned char	*ch;
+	size_t			i;
 
 	if (n == 0)
 		return ;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 20:28:16 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/19 23:41:00 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/25 15:50:53 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-    void    *mem;
+	void	*mem;
 
-    mem = malloc(count * size);
-    if (!mem)
-        return (NULL);
-    ft_bzero(mem, count * size);
-    return (mem);
+	mem = malloc(count * size);
+	if (!mem)
+		return (NULL);
+	ft_bzero(mem, count * size);
+	return (mem);
 }
 /*
 #include <stdio.h>

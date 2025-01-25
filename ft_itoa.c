@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:30:30 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/23 10:27:53 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/25 15:57:28 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_itoa(int n)
 static char	*ft_mem_al(int ito_len)
 {
 	char	*len;
-	
+
 	len = malloc((ito_len + 1) * sizeof(char));
 	if (!len)
 		return (NULL);

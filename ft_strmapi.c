@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 09:27:28 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/24 16:30:15 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/25 16:22:30 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char	*str;
+	char			*str;
 
 	if (!s || !f)
 		return (NULL);
@@ -37,17 +37,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // 		return (c - 32);
 // 	return c;
 // }
-
 // #include <stdio.h>
 // int	main()
 // {
 // 	const char *str = "Hola mundo!";
 // 	char *result;
-	
 // 	result = ft_strmapi(str, ft_prueba);	
 // 	printf("Old one: %s\n", str);
 // 	printf("New one: %s\n", result);
-
 // 	free(result);
 // 	return 0;
 // }
