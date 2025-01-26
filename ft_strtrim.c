@@ -6,7 +6,7 @@
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 21:29:38 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/26 14:14:08 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/26 21:47:29 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	if (ft_strlen(s1) == ft_strlen(set))
-		return (NULL);
 	end = ft_strlen(s1);
 	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
@@ -33,22 +31,27 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s2 = malloc((len + 1) * (sizeof (char)));
 	if (!s2)
 		return (NULL);
-//--------------------------------------------------------------------------------------------//
-	while (s1[len] && s1[len] != s1[end])//le tengo que marcar la parte final del coso
+	end = 0;
+	while (end < len)
 	{
-		s2[start] = s1[len];
-		len++;
+		s2[end] = s1[start + end];
+		end++;
 	}
 	s2[len] = '\0';
 	return (s2);
 }
-
+/*
 #include <stdio.h>
 
 int	main ()
 {
-	printf("%s\n", ft_strtrim("HolaMundo", "undo"));
-	printf("%s\n", ft_strtrim("HolaMundo", "Hola"));
+	char	*res=ft_strtrim("***HolaMundo***", "*");
+	char	*res2=ft_strtrim("HolaMundo", "Ho");
+	printf("%s\n", res);
+	printf("%s\n", res2);
+	free(res);
+	free(res2);
 
 	return 0;	
 }
+*/
