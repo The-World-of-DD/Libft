@@ -1,6 +1,62 @@
-*.gch
+# Compiled Files
+*.o
 *.out
+*.lo
+*.la
+*.so
+*.a
+*.dylib
+*.exe
+*.dll
 
-mains.c
+# Compiled Folder
+/build/
+/bin/
+/lib/
+/obj/
 
-/.vscode
+# Archivos de depuración
+*.gch
+*.dSYM/
+*.log
+*.aux
+
+# Mac Files
+.DS_Store
+Thumbs.db
+
+# Archivos del IDE
+# Visual Studio
+*.sln
+*.vcxproj*
+*.ncb
+*.suo
+*.user
+*.pdb
+ipch/
+*.db
+
+# Eclipse
+.cproject
+.project
+.settings/
+
+# Code::Blocks
+*.layout
+*.depend
+
+# CLion
+.idea/
+cmake-build-debug/
+cmake-build-release/
+
+# VSCode
+.vscode/
+*.code-workspace
+script.dSYM/
+
+# Tmp Files
+*.tmp
+*.temp
+*.swp
+*~
