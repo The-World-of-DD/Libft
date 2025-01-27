@@ -54,6 +54,7 @@ cmake-build-release/
 .vscode/
 *.code-workspace
 script.dSYM/
+a.out.dSYM/
 
 # Tmp Files
 *.tmp
