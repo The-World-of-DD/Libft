@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 22:11:23 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/27 13:47:08 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/27 14:01:09 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ static char	*ft_fill_word(const char *s, char c)
 	int	word_count;
 	
 	str = malloc(ft_word_count(s, c) * (sizeof(char)));
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{
