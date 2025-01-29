@@ -1,0 +1,37 @@
+ # Compilation and executable files
+*.o
+*.out
+*.exe
+*.obj
+*.a
+*.so
+*.dll
+
+# Debug files
+*.dSYM/
+*.pch
+*.gcno
+*.gcda
+*.gcov
+
+# Build directories
+/build/
+/bin/
+/Debug/
+/Release/
+
+# Temporary and editor files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Generated tool files
+*.log
+*.tags
+*.lock
+
+# IDE configurations
+.vscode/
+.idea/
+*.code-workspace
