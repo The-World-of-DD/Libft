@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 22:11:23 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/27 14:01:09 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/29 11:21:09 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,24 +35,39 @@ static char	*ft_fill_word(const char *s, char c)
 {
 	char	**str;
 	int	i;
-	int	word_count;
+	int	j;
+	int	start;
 	
-	str = malloc(ft_word_count(s, c) * (sizeof(char)));
+	str = malloc(ft_word_count(s, c) * (sizeof(char)));//simplemente alocamos la memoria de cada una de los lugares de las palabras
 	if (!str)
 		return (NULL);
 	i = 0;
+	j = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
+		while (s[i] == c)//saltamos los delimitadores
 			i++;
-		while (s[i] != c && s[i] != '\0')
-		{
-			*str[i] = s[i];
-			i++;
+		if (s[i] != '\0')//si es distinto al final -> Encontramos una palabra nueva porque no es delimitador
+		{	
+			start = i;
+			while (s[i] != c && s[i] != '\0')//sigue avanzando
+				i++;
+			
+			str[j] = malloc((i - start) * sizeof(char));
+			if(!str[j])//cuando el segundo malloc fallla liberamos las previas
+			{
+				while (j > 0)
+					free (str[--j]);//predecremento, mejor para la liberacion de mem.
+				free(str);
+				return (NULL);
+			}
+			strncpy(str[i][i - start], &s[start], i - start);
+			str[i][i - start];
+			j++;
 		}
-	//*str[i] = '\0';//no me queda muy claro que tenga que ir aqui.
-	return (&**str);
 	}
+	str[j] = '\0';//no me queda muy claro que tenga que ir aqui.
+	return (str);
 }
 
 // char	**ft_split(const char *s, char c)
@@ -68,23 +83,26 @@ static char	*ft_fill_word(const char *s, char c)
 //          /* copy the world at the first free index in our words array */
 //    /* return our words array */
 // }
-
 #include <stdio.h>
-int	main ()
+
+int	main(void)
 {
 	char	*str = "Hola,,,Hola,Mundo,Adios,Mundo,,,,,,Adios";
 	char	*str2 = ",Hola,,Adios,";
 	char	c = ',';
-	char	**words = ft_fill_word(str, c);
-	int i = 0;
-	printf("%i\n", ft_word_count(str, c));
-	printf("%i\n", ft_word_count(str2, c));
 
-	while (condition)
+	char **words = ft_fill_word(str, c);
+	if (words)
 	{
-		/* code */
+		int i = 0;
+		while (words[i])
+		{
+			printf("Word %d: %s\n", i, words[i]);
+			free(words[i]); // Free each word
+			i++;
+		}
+		free(words); // Free the main array
 	}
-	
 
 	return 0;
 }
