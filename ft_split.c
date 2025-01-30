@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 22:11:23 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/30 16:44:30 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/30 21:00:19 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	ft_word_count(const char *s, char c)
 static char	*ft_strcpy(char *dst, const char *src, size_t len)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (src[i] && i < len)
 	{
@@ -56,16 +56,12 @@ void static	ft_test_mem_free(char **str, int j)
 	}
 }
 
-char	**ft_split(const char *s, char c)
+static void	ft_split_process(const char *s, char c, char **str)
 {
-	char	**str;
-	int		i;
-	int		j;
-	int		start;
+	int	i;
+	int	start;
+	int	j;
 
-	str = malloc((ft_word_count(s, c) + 1) * (sizeof(char *)));
-	if (!str)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -84,6 +80,16 @@ char	**ft_split(const char *s, char c)
 		}
 	}
 	str[j] = NULL;
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	**str;
+
+	str = malloc((ft_word_count(s, c) + 1) * (sizeof(char *)));
+	if (!str)
+		return (NULL);
+	ft_split_process(s, c, str);
 	return (str);
 }
 /*
