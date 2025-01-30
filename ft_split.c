@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 22:11:23 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/29 11:21:09 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/29 21:04:09 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,21 @@ static int	ft_word_count(const char *s, char c)
 	return (word_count);
 }
 
-static char	*ft_fill_word(const char *s, char c)
+char	*ft_strncpy(char *dst, const char* src, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < len)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	return (dst);
+}
+
+
+char	**ft_split(const char *s, char c)
 {
 	char	**str;
 	int	i;
@@ -61,7 +75,7 @@ static char	*ft_fill_word(const char *s, char c)
 				free(str);
 				return (NULL);
 			}
-			strncpy(str[i][i - start], &s[start], i - start);
+			ft_strncpy(str[i][i - start], &s[start], i - start);
 			str[i][i - start];
 			j++;
 		}
