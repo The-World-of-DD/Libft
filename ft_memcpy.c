@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 08:43:09 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/25 16:04:46 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/31 13:47:58 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t				i;
 	unsigned char		*destn;
 	const unsigned char	*sourc;
-
+	
+	if (!dst || !src || !n)
+		return ;
 	destn = (unsigned char *)dst;
 	sourc = (const unsigned char *)src;
 	i = 0;
@@ -47,5 +49,4 @@ int	main ()
 	printf("%s\n", src);
 	printf("%s\n", dest);
 	return 0;
-}
-*/
+}*/
