@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 09:35:03 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/25 16:21:02 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/31 12:43:33 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,29 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	j;
+	size_t	d_len;
+	size_t	s_len;
 
-	j = ft_strlen(dst);
+	d_len = ft_strlen(dst);
+	s_len = ft_strlen(src);
 	if (dstsize == 0)
-		return (dstsize);
-	if (dstsize <= j)
-		return (j + ft_strlen(src));
+		return (s_len);
+	if (dstsize <= s_len)
+		return (dstsize + s_len);
 	i = 0;
-	while (src[i] && (i + j < dstsize - 1))
+	while (src[i] && (i + d_len < dstsize - 1))
 	{
-		dst[j] = src[i];
+		dst[d_len + i] = src[i];
 		i++;
-		j++;
 	}
-	dst[j] = '\0';
-	return (ft_strlen(src) + ft_strlen(dst));
+	dst[d_len + i] = '\0';
+	return (d_len + s_len);
 }
 /*
 #include <stdio.h>
 
 int	main()
 {
-
 	char src [] = "Hola Mundo";
 	char dest [] = "ADIOS";
 	size_t len = 10;

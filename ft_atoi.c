@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 15:56:51 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/26 22:08:28 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/31 13:06:35 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,11 @@ int	ft_atoi(const char *str)
 	result = 0;
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
-	if (*str == '-' && *str == '+')
+	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-		{
 			sign = -1;
-			str++;
-		}
+		str++;
 	}
 	while (*str >= '0' && *str <= '9')
 	{

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 21:36:34 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/25 16:12:40 by dierojas         ###   ########.fr       */
+/*   Created: 2025/01/21 21:40:04 by dierojas          #+#    #+#             */
+/*   Updated: 2025/01/31 13:30:44 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	write (fd, &c, 1);
 }

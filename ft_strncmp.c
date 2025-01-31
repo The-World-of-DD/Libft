@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 14:26:15 by dd                #+#    #+#             */
-/*   Updated: 2025/01/25 16:24:18 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/31 12:52:49 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	{
 		if (s1[i] != s2[i])
 			return ((unsigned int)s1[i] - (unsigned int)s2[i]);
-		if (i < n)
-			return ((unsigned int)s1[i] - (unsigned int)s2[i]);
 		i++;
 	}
+	if (i < n)
+		return ((unsigned int)s1[i] - (unsigned int)s2[i]);
 	return (0);
 }
 /*

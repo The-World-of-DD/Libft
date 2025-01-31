@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 15:12:06 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/26 21:55:29 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/31 12:53:50 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	if (!s || !c)
+		return (NULL);
 	while (*s)
 	{
 		if (*s == (char)c)
