@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 15:12:06 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/01 16:36:26 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/01 16:48:34 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-
+/*
 #include <stdio.h>
 
 int	main()
@@ -38,3 +38,4 @@ int	main()
 	printf("%d\n", a);
 	printf("%d\n", c);
 }
+*/

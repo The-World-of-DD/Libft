@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 08:43:09 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/31 13:47:58 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/01 17:27:42 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char		*destn;
 	const unsigned char	*sourc;
 	
-	if (!dst || !src || !n)
-		return ;
+	if (!dst || !src)
+		return (NULL);
 	destn = (unsigned char *)dst;
 	sourc = (const unsigned char *)src;
 	i = 0;
@@ -32,7 +32,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 }
 /*	
 #include <stdio.h>
-
 int	main ()
 {
 	char src [] = "Hola Mundo";
@@ -49,4 +48,5 @@ int	main ()
 	printf("%s\n", src);
 	printf("%s\n", dest);
 	return 0;
-}*/
+}
+*/
