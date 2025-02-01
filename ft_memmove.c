@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 20:30:53 by dd                #+#    #+#             */
-/*   Updated: 2025/02/01 18:43:00 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/01 19:13:39 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,29 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	unsigned char		*d_cpy;
-	size_t				i;
+	unsigned char	*d_cpy;
+	unsigned char	*s_cpy;
+	size_t			i;
 
-	d_cpy = (unsigned char *)dst;
-	if ( !d_cpy || !src || dst == src || !n)
+	if (!dst || !src)
 		return (NULL);
-	if (d_cpy < (const unsigned char *)src)
+	d_cpy = (unsigned char *)dst;
+	s_cpy = (unsigned char *)src;
+	i = n;
+	if (d_cpy > s_cpy)
 	{
-		while (*src)
-			*d_cpy++ = (const unsigned char *)src++;
+		while (i-- > 0)
+			d_cpy[i] = s_cpy[i];
 	}
 	else
 	{
-		*d_cpy += n;
-		(const unsigned char *)src += n;
-		while (n--)
-			*--d_cpy = *--src;
+		i = 0;
+		while (i++ < n)
+			d_cpy[i] = s_cpy[i];
 	}
 	return (dst);
 }
-
+/*
 #include <stdio.h>
 
 int main ()
@@ -51,3 +53,4 @@ int main ()
 	printf("%s\n", src);
 	printf("%s\n", dest);
 }
+*/
