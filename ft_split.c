@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 22:11:23 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/31 13:11:10 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/01 16:43:18 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char	**ft_split(const char *s, char c)
 {
 	char	**str;
 
-	if (!s || s[0] == '\0')
+	if (!s)
 		return (NULL);
 	str = malloc((ft_word_count(s, c) + 1) * (sizeof(char *)));
 	if (!str)
