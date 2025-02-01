@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 22:11:23 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/01 22:18:15 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/01 22:24:44 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static void	ft_test_mem_free(char **str, int j)
 			free (str[--j]);
 		free(str);
 	}
-} 
+}
 
 static char	**ft_split_process(const char *s, char c, char **str, int i)
 {
