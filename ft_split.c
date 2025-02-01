@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 22:11:23 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/01 22:06:16 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/01 22:18:15 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ static char	**ft_split_process(const char *s, char c, char **str, int i)
 	int	start;
 	int	j;
 
-	i = 0;
 	j = 0;
 	while (s[i])
 	{
@@ -131,4 +130,5 @@ int	main(void)
 		ft_main_free_mem(words); // Free the main array
 	}
 	return 0;
-} */
+}
+ */
