@@ -6,7 +6,7 @@
 #    By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/25 19:50:54 by dierojas          #+#    #+#              #
-#    Updated: 2025/01/30 21:31:37 by dierojas         ###   ########.fr        #
+#    Updated: 2025/02/01 21:30:41 by dierojas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ $(NAME): $(OBJS)
 clean:
 	rm -f $(OBJS)
 
-fclean:
+fclean:	clean
 	rm -f $(NAME)
 
 re: fclean all

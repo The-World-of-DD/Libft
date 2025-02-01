@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 22:11:23 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/01 16:43:18 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/01 22:06:16 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,10 @@ static void	ft_test_mem_free(char **str, int j)
 			free (str[--j]);
 		free(str);
 	}
-}
+} 
 
-static void	ft_split_process(const char *s, char c, char **str)
+static char	**ft_split_process(const char *s, char c, char **str, int i)
 {
-	int	i;
 	int	start;
 	int	j;
 
@@ -74,27 +73,33 @@ static void	ft_split_process(const char *s, char c, char **str)
 				i++;
 			str[j] = malloc((i - start + 1) * sizeof(char));
 			if (!str[j])
+			{
 				ft_test_mem_free(str, j);
+				return (NULL);
+			}
 			ft_strcpy(str[j], &s[start], i - start);
 			j++;
 		}
 	}
 	str[j] = NULL;
+	return (str);
 }
 
 char	**ft_split(const char *s, char c)
 {
 	char	**str;
+	int		i;
 
+	i = 0;
 	if (!s)
 		return (NULL);
 	str = malloc((ft_word_count(s, c) + 1) * (sizeof(char *)));
 	if (!str)
 		return (NULL);
-	ft_split_process(s, c, str);
+	str = ft_split_process(s, c, str, i);
 	return (str);
 }
-/*
+/* 
 static void	ft_main_free_mem(char **words)
 {
 	int	i;
@@ -126,5 +131,4 @@ int	main(void)
 		ft_main_free_mem(words); // Free the main array
 	}
 	return 0;
-}
-*/
+} */
