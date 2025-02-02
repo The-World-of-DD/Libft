@@ -14,14 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i;
+	int	i;
 
 	if (!s)
 		return (NULL);
 	i = 0;
 	while (s[i])
 		i++;
-	while (s[i] >= 0)
+	while (i >= 0)
 	{
 		if (s[i] == (char)c)
 			return ((char *)&s[i]);
@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-/*
+/* 
 #include <string.h>
 #include <stdio.h>
 
@@ -44,4 +44,4 @@ int main ()
 
     return 0;
 }
-*/
+ */

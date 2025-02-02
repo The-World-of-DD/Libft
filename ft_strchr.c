@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 15:12:06 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/02 02:16:48 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/02 13:01:16 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	unsigned int	i;
+	unsigned char	ch;
+
+	ch = (unsigned char)c;
+	i = 0;
+	while (s[i])
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		if ((unsigned char)s[i] == ch)
+			return ((char *)&s[i]);
+		i++;
 	}
-	if (c == '\0')
-		return ((char *)s);
+	if (ch == '\0')
+		return ((char *)&s[i]);
 	return (NULL);
 }
-/*
+/* 
 #include <stdio.h>
 
 int	main()
@@ -35,5 +40,4 @@ int	main()
 
 	printf("%d\n", a);
 	printf("%d\n", c);
-}
-*/
+} */
