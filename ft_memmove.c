@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 20:30:53 by dd                #+#    #+#             */
-/*   Updated: 2025/02/02 12:18:35 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/02 14:05:19 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	unsigned char	*s_cpy;
 	size_t			i;
 
-	if (!dst || !src)
-		return (NULL);
 	d_cpy = (unsigned char *)dst;
 	s_cpy = (unsigned char *)src;
 	if (d_cpy > s_cpy)
