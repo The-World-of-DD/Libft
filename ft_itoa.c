@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 10:30:30 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/01 17:25:10 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/02 03:32:56 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_itoa(int n)
 	char	*ito;
 	long	nb;
 
-	nb = n;
+	nb = (long)n;
 	len = ft_count_mem(nb);
 	ito = ft_mem_al(len);
 	if (!ito)
@@ -60,7 +60,7 @@ static	int	ft_count_mem(long nb)
 
 	count = 0;
 	if (nb == -2147483648)
-		return (12);
+		return (11);
 	if (nb < 0)
 	{
 		nb = -nb;

@@ -6,7 +6,7 @@
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 01:45:12 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/26 21:58:31 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/02 03:29:04 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!haystack || !needle)
+		return (NULL);
 	i = 0;
 	if (needle[i] == '\0')
 		return ((char *)haystack);
