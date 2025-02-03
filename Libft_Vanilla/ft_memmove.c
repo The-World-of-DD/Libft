@@ -1,49 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/17 08:36:51 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/03 05:23:29 by dierojas         ###   ########.fr       */
+/*   Created: 2025/01/16 20:30:53 by dd                #+#    #+#             */
+/*   Updated: 2025/02/02 14:17:44 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t	i;
+	unsigned char	*d_cpy;
+	unsigned char	*s_cpy;
+	size_t			i;
 
-	if (!dst || !src)
+	if (!dst && !src)
 		return (NULL);
-	if (dstsize == 0)
-		return (ft_strlen(src));
-	i = 0;
-	while (src[i] && (i < dstsize - 1))
+	d_cpy = (unsigned char *)dst;
+	s_cpy = (unsigned char *)src;
+	if (d_cpy > s_cpy)
 	{
-		dst[i] = src[i];
-		i++;
+		while (n-- > 0)
+			d_cpy[n] = s_cpy[n];
 	}
-	dst[i] = '\0';
-	while (src[i])
-		i++;
-	return (i);
+	else
+	{
+		i = 0;
+		while (i < n)
+		{
+			d_cpy[i] = s_cpy[i];
+			i++;
+		}
+	}
+	return (dst);
 }
 /*
 #include <stdio.h>
 
-int	main()
+int main ()
 {
 	char src [] = "ADIOS";
-	char dest [10] = "Hola Mundo";
-	size_t len = 4;
+	char dest [] = "Hola Mundo";
+	size_t len = 3;
 
 	printf("%s\n", src);
 	printf("%s\n", dest);
 
-	printf ("%zu\n", ft_strlcpy(dest, src, len));
+	ft_memmove(dest, src, len);
 
 	printf("%s\n", src);
 	printf("%s\n", dest);
