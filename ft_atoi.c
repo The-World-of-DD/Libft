@@ -6,7 +6,7 @@
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 15:56:51 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/03 21:11:20 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:16:07 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-/*
+/* 
 #include <stdio.h>
 #include <string.h>
 
@@ -46,5 +46,7 @@ int main ()
 
     printf("%i\n", atoi(s));
     printf("%i\n", ft_atoi(s));
+	printf("%i\n", ft_atoi(""));
+	
 }
-*/
+ */
