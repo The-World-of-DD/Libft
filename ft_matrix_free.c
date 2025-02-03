@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_matrix_free.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 21:40:04 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/03 21:11:44 by dierojas         ###   ########.fr       */
+/*   Created: 2025/02/03 21:04:39 by dierojas          #+#    #+#             */
+/*   Updated: 2025/02/03 21:06:08 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_test_mem_free(char **str, int j)
 {
-	int	i;
-
-	if (!s)
-		return ;
-	i = 0;
-	while (s[i])
+	if (!str[j])
 	{
-		write (fd, &s[i], 1);
-		s++;
+		while (j > 0)
+			free (str[--j]);
+		free(str);
 	}
 }

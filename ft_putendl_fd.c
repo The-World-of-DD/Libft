@@ -6,7 +6,7 @@
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 21:43:17 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/03 05:20:07 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:11:54 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putendl_fd(char *s, int fd)
 	int	i;
 
 	if (!s)
-		return (NULL);
+		return ;
 	i = 0;
 	while (*s)
 	{

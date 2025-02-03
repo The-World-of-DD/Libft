@@ -6,7 +6,7 @@
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 15:56:51 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/03 05:18:17 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:11:20 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_atoi(const char *str)
 	int	result;
 
 	if (!str)
-		return (NULL);
+		return (-1);
 	sign = 1;
 	result = 0;
 	while (*str == ' ' || (*str >= 9 && *str <= 13))

@@ -6,7 +6,7 @@
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 09:35:03 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/03 05:23:58 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:10:15 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 
 	if (!dst || !src)
-		return (NULL);
+		return (-1);
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (dstsize == 0)

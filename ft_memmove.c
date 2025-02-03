@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 20:30:53 by dd                #+#    #+#             */
-/*   Updated: 2025/02/02 14:17:44 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:03:40 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	unsigned char	*s_cpy;
 	size_t			i;
 
-	if (!dst && !src)
+	if (!dst || !src)
 		return (NULL);
 	d_cpy = (unsigned char *)dst;
 	s_cpy = (unsigned char *)src;

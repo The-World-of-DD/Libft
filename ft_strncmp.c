@@ -6,7 +6,7 @@
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 14:26:15 by dd                #+#    #+#             */
-/*   Updated: 2025/02/03 05:26:40 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:10:41 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	unsigned int	i;
 
 	if (!s1 || !s2)
-		return (NULL);
+		return (-1);
 	i = 0;
 	while (i < n && s1[i] && s2[i])
 	{
