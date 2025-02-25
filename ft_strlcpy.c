@@ -6,7 +6,7 @@
 /*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 08:36:51 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/03 21:09:39 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/18 16:52:11 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	if (!dst || !src)
-		return (0);
+		return (-1);
 	if (dstsize == 0)
 		return (ft_strlen(src));
 	i = 0;
