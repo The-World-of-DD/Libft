@@ -35,3 +35,6 @@
 .vscode/
 .idea/
 *.code-workspace
+
+DS.STORE
+DS_STORE
