@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+         #
+#    By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/25 19:50:54 by dierojas          #+#    #+#              #
-#    Updated: 2025/04/05 18:00:16 by dierojas         ###   ########.fr        #
+#    Updated: 2025/04/05 19:01:38 by dierojas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = \
 		ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c 
+		ft_lstadd_back.c
 OBJS = $(SRCS:.c=.o)
 BONUSOBJ = $(BONUS:.c=.o)
 CC = cc
