@@ -6,7 +6,7 @@
 #    By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/25 19:50:54 by dierojas          #+#    #+#              #
-#    Updated: 2025/04/04 20:30:02 by dierojas         ###   ########.fr        #
+#    Updated: 2025/04/05 16:33:44 by dierojas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,14 +22,14 @@ SRCS = \
 		ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-		ft_lstadd_back
+		ft_lstadd_back ft_lstdelone.c ft_lstclear.c 
 OBJS = $(SRCS:.c=.o)
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(BONUS)
 	$(AR) -r $@ $?
 
 %.o: %.c
@@ -43,4 +43,4 @@ fclean:	clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
