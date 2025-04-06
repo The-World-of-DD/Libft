@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 19:33:14 by dierojas          #+#    #+#             */
-/*   Updated: 2025/04/05 19:41:34 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/04/06 18:57:17 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!*lst || !del)
 		return ;
-	aux = *lst;
-	(del)(aux -> content);
-	free(lst)
-	while (aux -> next != NULL)
+	while (*lst)
 	{
-		aux -> next = aux;
+		aux = *lst;
+		*lst = (*lst) -> next;
 		(del)(aux -> content);
-		free()
+		free(aux);
 	}
-	
-	*lst = NULL;
 }
