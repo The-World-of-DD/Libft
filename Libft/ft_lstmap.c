@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 19:01:04 by dierojas          #+#    #+#             */
-/*   Updated: 2025/04/06 19:58:45 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/04/06 20:22:00 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		
 	}
-	
-	
 }
