@@ -6,7 +6,7 @@
 #    By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/25 19:50:54 by dierojas          #+#    #+#              #
-#    Updated: 2025/04/07 14:52:14 by dierojas         ###   ########.fr        #
+#    Updated: 2025/04/07 14:53:13 by dierojas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,6 @@ fclean:	clean
 re: fclean all
 
 bonus:	$(OBJS) $(BONUSOBJ)
-	ar rcd $(NAME) $(OBJS) $(BONUSOBJ)
+	ar rcs $(NAME) $(OBJS) $(BONUSOBJ)
 
 .PHONY: all clean fclean re bonus
