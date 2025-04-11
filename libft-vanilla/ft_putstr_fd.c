@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 21:40:04 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/03 21:11:44 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/25 16:15:33 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
-	if (!s)
-		return ;
 	i = 0;
 	while (s[i])
 	{

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+         #
+#    By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/25 19:50:54 by dierojas          #+#    #+#              #
-#    Updated: 2025/04/07 14:55:42 by dierojas         ###   ########.fr        #
+#    Updated: 2025/02/03 21:05:12 by dierojas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,32 +20,26 @@ SRCS = \
 		ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c \
 		ft_strjoin.c ft_strtrim.c ft_itoa.c ft_split.c \
 		ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
-		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c
+		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+		ft_isspace.c ft_matrix_free.c
 OBJS = $(SRCS:.c=.o)
-BONUSOBJ = $(BONUS:.c=.o)
-CC = cc
+CC = gcc
 CFLAGS = -Wall -Werror -Wextra
-AR = ar
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(BONUSOBJ)
+$(NAME): $(OBJS)
 	$(AR) -r $@ $?
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 
 clean:
-	rm -f $(OBJS) $(BONUSOBJ)
+	rm -f $(OBJS)
 
 fclean:	clean
 	rm -f $(NAME)
 
 re: fclean all
 
-bonus:	$(OBJS) $(BONUSOBJ)
-	ar rcs $(NAME) $(OBJS) $(BONUSOBJ)
-
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re

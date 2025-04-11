@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 00:39:44 by dierojas          #+#    #+#             */
-/*   Updated: 2025/03/08 12:09:02 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/02 14:00:19 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

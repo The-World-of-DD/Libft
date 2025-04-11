@@ -3,34 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 22:11:23 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/03 05:33:24 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/01 22:24:44 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_word_count(const char *s, char c);
-static char	*ft_strcpy(char *dst, const char *src, size_t len);
-static void	ft_test_mem_free(char **str, int j);
-static char	**ft_split_process(const char *s, char c, char **str, int i);
-
-char	**ft_split(const char *s, char c)
-{
-	char	**str;
-	int		i;
-
-	i = 0;
-	if (!s)
-		return (NULL);
-	str = malloc((ft_word_count(s, c) + 1) * (sizeof(char *)));
-	if (!str)
-		return (NULL);
-	str = ft_split_process(s, c, str, i);
-	return (str);
-}
 
 static int	ft_word_count(const char *s, char c)
 {
@@ -104,6 +84,20 @@ static char	**ft_split_process(const char *s, char c, char **str, int i)
 	return (str);
 }
 
+char	**ft_split(const char *s, char c)
+{
+	char	**str;
+	int		i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	str = malloc((ft_word_count(s, c) + 1) * (sizeof(char *)));
+	if (!str)
+		return (NULL);
+	str = ft_split_process(s, c, str, i);
+	return (str);
+}
 /* 
 static void	ft_main_free_mem(char **words)
 {

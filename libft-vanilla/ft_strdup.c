@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 23:41:22 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/03 05:21:48 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/01 22:23:35 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strdup(const char *s1)
 	char	*str;
 	size_t	i;
 
-	if (!s1)
-		return (NULL);
 	i = ft_strlen(s1) + 1;
 	str = malloc(i);
 	if (!str)

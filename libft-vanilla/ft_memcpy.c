@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 08:43:09 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/03 21:03:40 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/02 14:16:23 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char		*destn;
 	const unsigned char	*sourc;
 
-	if (!dst || !src)
+	if (!dst && !src)
 		return (NULL);
 	destn = (unsigned char *)dst;
 	sourc = (const unsigned char *)src;

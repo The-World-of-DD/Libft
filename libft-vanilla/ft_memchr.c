@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 17:05:25 by dd                #+#    #+#             */
-/*   Updated: 2025/02/03 05:42:52 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/01/25 15:59:14 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t	i;
 	char	*ptr;
 
-	if (!s)
-		return (NULL);
 	ptr = (char *)s;
 	i = 0;
 	while (i < n)

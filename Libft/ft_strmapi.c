@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 09:27:28 by dierojas          #+#    #+#             */
-/*   Updated: 2025/01/25 16:22:30 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/03 05:28:11 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-// static char	ft_prueba(unsigned int n, char c)
+//la funcion no se si puede ser nula
 // {
+// static char	ft_prueba(unsigned int n, char c)
 // 	if (n % 2 == 1)
 // 		return (c - 32);
 // 	return c;

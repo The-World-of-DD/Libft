@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
+/*   By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 09:35:03 by dierojas          #+#    #+#             */
-/*   Updated: 2025/02/01 16:14:08 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:10:15 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dst_len;
 	size_t	src_len;
 
+	if (!dst || !src)
+		return (-1);
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (dstsize == 0)
