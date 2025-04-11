@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dierojas <dierojas@student.42madrid.com    +#+  +:+       +#+         #
+#    By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/25 19:50:54 by dierojas          #+#    #+#              #
-#    Updated: 2025/02/03 21:05:12 by dierojas         ###   ########.fr        #
+#    Updated: 2025/04/11 17:50:17 by dierojas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS = \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 		ft_isspace.c ft_matrix_free.c
 OBJS = $(SRCS:.c=.o)
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
