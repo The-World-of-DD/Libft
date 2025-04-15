@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:40:37 by dierojas          #+#    #+#             */
-/*   Updated: 2025/04/15 01:45:11 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/04/15 02:00:46 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,11 @@ void	ft_matrix_free(char **str, int j);
 //
 //	ft_print_utils functions 
 //
-int	ft_hexdec_aux(char const *s, va_list args);
-int	ft_pointer_aux(va_list args);
-int	ft_putchar_aux(va_list args);
-int	ft_putnbr_aux(char const *s, va_list args);
-int	ft_putstr_aux(va_list args);
+int		ft_hexdec_aux(char const *s, va_list args);
+int		ft_pointer_aux(va_list args);
+int		ft_putchar_aux(va_list args);
+int		ft_putnbr_aux(char const *s, va_list args);
+int		ft_putstr_aux(va_list args);
 //
 //	2nd core functions
 //
