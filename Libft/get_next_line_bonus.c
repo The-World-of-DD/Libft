@@ -6,13 +6,17 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 21:33:01 by dierojas          #+#    #+#             */
-/*   Updated: 2025/04/14 15:20:33 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/04/15 01:50:42 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "libft.h"
 
-char	*get_next_line(int fd)
+char	*ft_extract_line(char *aux);
+char	*ft_update_aux(char *aux);
+char	*ft_aux_reading(int fd, char *aux);
+
+char	*get_next_line_bonus(int fd)
 {
 	char		*gnl;
 	static char	*aux[MAX_FD];
@@ -112,22 +116,28 @@ char	*ft_update_aux(char *aux)
 	return (free(aux), rest);
 }
 
-# include <stdio.h>
+/* # include <stdio.h>
 int main ()
 {
-    int fd = open("texto.txt", O_RDONLY);
-    if (fd < 0)
+    int fd1[1] = open("texto.txt", O_RDONLY);
+	int fd[2] = open("texto2.txt", O_RDONLY);
+    if (fd[1] <= 0 || fd[2] <= 0)
     {
-        perror("Error al abrir el archivo");
+        printf("Error al abrir el archivo");
         return 1;
     }
-	char	*line = get_next_line(fd);
-	while (line)
+	char	*line = get_next_line(fd[1]);
+	char	*line2 = get_next_line(fd[2]);
+	while (line[1] || line[2])
 	{
-		printf("Linea leida --> %s", line);
+		printf("1 --> %s", line);
+		printf("2 --> %s", line2);
 		free(line);
-		line = get_next_line(fd);
+		free(line);
+		line = get_next_line(fd[1]);
+		line2 = get_next_line(fd[2]);
 	}
-	close(fd);
+	close(fd[1]);
+	close(fd[2]);
 	return 0;
-}
+}  */

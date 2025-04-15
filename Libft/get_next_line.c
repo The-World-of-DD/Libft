@@ -6,11 +6,15 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 21:33:01 by dierojas          #+#    #+#             */
-/*   Updated: 2025/04/14 15:23:05 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/04/15 01:46:21 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
+
+static char	*ft_extract_line(char *aux);
+static char	*ft_update_aux(char *aux);
+static char	*ft_aux_reading(int fd, char *aux);
 
 char	*get_next_line(int fd)
 {
@@ -111,14 +115,14 @@ char	*ft_update_aux(char *aux)
 	rest[o] = '\0';
 	return (free(aux), rest);
 }
-
+/* 
 # include <stdio.h>
 int main ()
 {
     int fd = open("voidtxt.txt", O_RDONLY);
     if (fd < 0)
     {
-        perror("Error al abrir el archivo");
+        printf("Error al abrir el archivo");
         return 1;
     }
 	char	*line = get_next_line(fd);
@@ -131,3 +135,4 @@ int main ()
 	close(fd);
 	return 0;
 }
+ */

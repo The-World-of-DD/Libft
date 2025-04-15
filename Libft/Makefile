@@ -6,7 +6,7 @@
 #    By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/25 19:50:54 by dierojas          #+#    #+#              #
-#    Updated: 2025/04/11 17:50:17 by dierojas         ###   ########.fr        #
+#    Updated: 2025/04/15 01:58:35 by dierojas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,14 +21,16 @@ SRCS = \
 		ft_strjoin.c ft_strtrim.c ft_itoa.c ft_split.c \
 		ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-		ft_isspace.c ft_matrix_free.c
+		ft_isspace.c ft_matrix_free.c ft_putchar.c ft_putstr.c \
+		ft_putnbr.c ft_put_unsnbr.c ft_put_hexdec.c ft_printf_utils.c \
+		ft_printf.c get_next_line.c get_next_line_bonus.c
 OBJS = $(SRCS:.c=.o)
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) 
 	$(AR) -r $@ $?
 
 %.o: %.c

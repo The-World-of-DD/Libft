@@ -5,77 +5,93 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/08 20:37:10 by dierojas          #+#    #+#             */
-/*   Updated: 2025/03/28 09:31:48 by dierojas         ###   ########.fr       */
+/*   Created: 2025/03/27 21:25:56 by dierojas          #+#    #+#             */
+/*   Updated: 2025/04/15 01:31:00 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_putchar(char c)
+int	ft_hexdec_aux(char const *s, va_list args)
 {
-	return (write (1, &c, 1));
-}
+	size_t				i;
+	unsigned long long	lnb;
+	int					count;
 
-int	ft_putnbr(int n)
-{
-	int	count;
-
+	i = 0;
 	count = 0;
-	if (n == -2147483648)
-		return (write (1, "-2147483648", 11));
-	if (n < 0)
+	if (s[i] == 'x')
 	{
-		n = -n;
-		ft_putchar('-');
-		count++;
+		lnb = va_arg(args, unsigned int);
+		count += ft_put_hexdec(lnb, 0);
 	}
-	if (n >= 10)
-		count += ft_putnbr((n / 10));
-	count += ft_putchar((n % 10) + '0');
-	return (count);
-}
-
-int	ft_putstr(char *s)
-{
-	int	count;
-
-	if (!s)
-		return (ft_putstr("(null)"));
-	count = 0;
-	while (s[count])
+	else if (s[i] == 'X')
 	{
-		ft_putchar(s[count]);
-		count++;
+		lnb = va_arg(args, unsigned int);
+		count += ft_put_hexdec(lnb, 1);
 	}
 	return (count);
 }
 
-int	ft_put_unsnbr(unsigned int n)
+int	ft_pointer_aux(va_list args)
 {
-	int	count;
+	unsigned long long	lnb;
+	int					count;
 
 	count = 0;
-	if (n >= 10)
-		count += ft_put_unsnbr((n / 10));
-	count += ft_putchar((n % 10) + '0');
+	lnb = va_arg(args, unsigned long long);
+	if (!lnb)
+		count += ft_putstr("(nil)");
+	else
+	{
+		count += ft_putstr("0x");
+		count += ft_put_hexdec(lnb, 0);
+	}
 	return (count);
 }
 
-int	ft_put_hexdec(unsigned long long nb, int m)
+int	ft_putchar_aux(va_list args)
 {
-	char	minh;
-	char	maxh;
+	char	c;
 	int		count;
 
-	minh = "0123456789abcdef"[nb % 16];
-	maxh = "0123456789ABCDEF" [nb % 16];
 	count = 0;
-	if (nb >= 16)
-		count += ft_put_hexdec(nb / 16, m);
-	if (!m)
-		count += ft_putchar(minh);
-	else
-		count += ft_putchar(maxh);
+	c = va_arg(args, int);
+	count += ft_putchar(c);
+	return (count);
+}
+
+int	ft_putnbr_aux(char const *s, va_list args)
+{
+	size_t				i;
+	int					count;
+	int					n;
+	unsigned int		np;
+
+	i = 0;
+	count = 0;
+	n = 0;
+	np = 0;
+	if (s[i] == 'd' || s[i] == 'i')
+	{
+		n = va_arg(args, int);
+		count += ft_putnbr(n);
+	}
+	else if (s[i] == 'u')
+	{
+		np = va_arg(args, unsigned int);
+		count += ft_put_unsnbr(np);
+	}
+	return (count);
+}
+
+int	ft_putstr_aux(va_list args)
+{
+	char	*str;
+	int		count;
+
+	count = 0;
+	str = va_arg(args, char *);
+	count += ft_putstr(str);
 	return (count);
 }

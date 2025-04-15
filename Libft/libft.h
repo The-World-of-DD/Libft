@@ -6,21 +6,32 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:40:37 by dierojas          #+#    #+#             */
-/*   Updated: 2025/04/11 17:51:37 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/04/15 01:45:11 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+# ifndef MAX_FD
+#  define MAX_FD 1024
+# endif
+
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
+# include <fcntl.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
 size_t	ft_strlen(const char *str);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -50,7 +61,27 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-int		ft_isspace(int c);
+//int		ft_put_unsnbr_fd(unsigned int n, int fd);
+//int		ft_put_hexdec_fd(unsigned long long nb, int bool, int fd);
+int		ft_putchar(char c);
+int		ft_putnbr(int n);
+int		ft_putstr(char *s);
+int		ft_put_unsnbr(unsigned int n);
+int		ft_put_hexdec(unsigned long long nb, int m);
 void	ft_matrix_free(char **str, int j);
+//
+//	ft_print_utils functions 
+//
+int	ft_hexdec_aux(char const *s, va_list args);
+int	ft_pointer_aux(va_list args);
+int	ft_putchar_aux(va_list args);
+int	ft_putnbr_aux(char const *s, va_list args);
+int	ft_putstr_aux(va_list args);
+//
+//	2nd core functions
+//
+int		ft_printf(char const *s, ...);
+char	*get_next_line(int fd);
+char	*get_next_line_bonus(int fd);
 
 #endif

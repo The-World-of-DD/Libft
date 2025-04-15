@@ -6,11 +6,13 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 19:53:22 by dierojas          #+#    #+#             */
-/*   Updated: 2025/03/28 09:30:15 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/04/15 01:59:54 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
+
+static int	ft_aux_printf(const char *s, va_list args);
 
 int	ft_printf(char const *s, ...)
 {
@@ -26,7 +28,7 @@ int	ft_printf(char const *s, ...)
 		if (s[i] == '%')
 		{
 			i++;
-			char_count += ft_aux_01(&s[i], args);
+			char_count += ft_aux_printf(&s[i], args);
 		}
 		else
 			char_count += ft_putchar(s[i]);
@@ -36,7 +38,7 @@ int	ft_printf(char const *s, ...)
 	return (char_count);
 }
 
-int	ft_aux_01(const char *s, va_list args)
+int	ft_aux_printf(const char *s, va_list args)
 {
 	int		char_count;
 	size_t	i;
