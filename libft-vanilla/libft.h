@@ -6,7 +6,7 @@
 /*   By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:40:37 by dierojas          #+#    #+#             */
-/*   Updated: 2025/09/30 14:08:07 by dierojas         ###   ########.fr       */
+/*   Updated: 2025/09/30 15:07:50 by dierojas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,9 @@ typedef	struct s_list
 	struct s_list	*next;
 }					t_list;
 
-//t_list	*ft_lstnew(void *content);
-//void	ft_lstadd_front(t_list **lst, t_list *new);
-//int		ft_lstsize(t_list *lst);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
 //t_list	*ft_lstlast(t_list *lst);
 //void	ft_lstadd_back(t_list **lst, t_list *new);
 //void	ft_lstdelone(t_list *lst, void (*del)(void *));
