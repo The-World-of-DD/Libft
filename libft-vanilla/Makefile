@@ -6,7 +6,7 @@
 #    By: dierojas < dierojas@student.42madrid.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/25 19:50:54 by dierojas          #+#    #+#              #
-#    Updated: 2025/04/07 14:55:42 by dierojas         ###   ########.fr        #
+#    Updated: 2025/10/02 18:54:02 by dierojas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,7 @@ SRCS = \
 		ft_strjoin.c ft_strtrim.c ft_itoa.c ft_split.c \
 		ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
 OBJS = $(SRCS:.c=.o)
 BONUSOBJ = $(BONUS:.c=.o)
 CC = cc
